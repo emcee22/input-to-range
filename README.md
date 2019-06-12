@@ -30,7 +30,7 @@ import React from 'react';
 import { InputToRange } from 'input-to-range';
 
 function App() {
-	const [labels, setLabels] = useState([['10-30', '150-170']]);
+    const [labels, setLabels] = useState([['10-30', '150-170']]);
 
 	return (
 		<div>
@@ -86,11 +86,11 @@ ranges: [[100], [101,102,103]]
 
 ## @TODO -> props that need implementation
 
-`allowIntersection` // don't allow duplicates inside the 2d arrays
-`onlyPossitiveNumbers` // allow only positive numbers
-`onlyNegativeNumbers` // allow only positive numbers
-`keys` // override the existing keys SPACE and ENTER
-`useDefaultStyles` // use default styles or not
+`allowIntersection` // don't allow duplicates inside the 2d arrays<br/>
+`onlyPossitiveNumbers` // allow only positive numbers<br/>
+`onlyNegativeNumbers` // allow only positive numbers<br/>
+`keys` // override the existing keys SPACE and ENTER<br/>
+`useDefaultStyles` // use default styles or not<br/>
 
 > Click here for the demo:
 > [InputToRange demo on firebase](https://inputtorange.firebaseapp.com/)

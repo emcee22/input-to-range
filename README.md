@@ -30,7 +30,7 @@ import React from 'react';
 import { InputToRange } from 'input-to-range';
 
 function App() {
-    const [labels, setLabels] = useState([['10-30', '150-170']]);
+    const [labels, setLabels] = useState(['10-30', '150-170']);
 
     return (
 	<div>

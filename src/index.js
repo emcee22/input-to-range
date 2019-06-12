@@ -79,11 +79,11 @@ export const InputToRange = props => {
 			return (
 				<span
 					key={key}
-					className='InputToRange__labels-container__label'
+					className="InputToRange__labels-container__label"
 				>
 					{label}
 					<button
-						className='InputToRange__labels-container__label__close'
+						className="InputToRange__labels-container__label__close"
 						onClick={() => {
 							removeLabel(key);
 						}}
@@ -96,16 +96,16 @@ export const InputToRange = props => {
 	};
 
 	return (
-		<div className='InputToRange'>
+		<div className="InputToRange">
 			{useLabels && (
-				<div className='InputToRange__labels-container'>
+				<div className="InputToRange__labels-container">
 					{createLabels()}
 				</div>
 			)}
-			<div className='InputToRange__input-container'>
+			<div className="InputToRange__input-container">
 				<input
-					className='InputToRange__input-container__input'
-					type='text'
+					className="InputToRange__input-container__input"
+					type="text"
 					value={inputState}
 					onChange={handleInputChange}
 					onKeyPress={handleKeyPress}
@@ -114,7 +114,7 @@ export const InputToRange = props => {
 			</div>
 
 			{errorState && (
-				<p className='InputToRange__Error'>{errorMessage}</p>
+				<p className="InputToRange__Error">{errorMessage}</p>
 			)}
 		</div>
 	);

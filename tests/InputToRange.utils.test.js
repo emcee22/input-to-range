@@ -3,7 +3,7 @@ import {
 	generateRangeBetweenTwoNumber,
 	createRangeFromInputValue,
 	createMultipleRangesFromArrayOfValues
-} from './InputToRange.utils.js';
+} from '../src/InputToRange.utils.js';
 
 it('cheks if splitTextBasedOnPattern() returns ok', () => {
 	const numbersPattern1 = splitTextBasedOnPattern('123');

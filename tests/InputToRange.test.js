@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { InputToRange } from './index.js';
+import { InputToRange } from '../src/index.js';
 
 const changeEv = {
 	preventDefault: () => {},

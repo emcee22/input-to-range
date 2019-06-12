@@ -1,0 +1,27 @@
+{
+	"name": "input-to-range",
+	"version": "1.0.0",
+	"description": "React component that generates 2d array based on input value",
+	"files": [
+		"dist/*"
+	],
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "babel ./src --out-dir ./dist -s inline --copy-files"
+	},
+	"author": "Paul Harbuz",
+	"license": "ISC",
+	"peerDependencies": {
+		"react": "^16.6.1",
+		"react-dom": "^16.6.3"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.4",
+		"@babel/core": "^7.4.5",
+		"@babel/preset-env": "^7.4.5",
+		"@babel/preset-react": "^7.0.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	}
+}

@@ -1,0 +1,83 @@
+/* css variables */
+:root {
+	--InputToRange-dark-color: #282c34;
+	--InputToRange-error-color: rgb(255, 4, 4);
+	--InputToRange-border-color: #ced4da;
+	--InputToRange-label-background-color: rgba(120, 199, 255, 0.27);
+	--InputToRange-button-active-background-color: rgba(
+		255,
+		9,
+		32,
+		0.13
+	);
+}
+
+.InputToRange {
+	background-clip: padding-box;
+	border: 1px solid var(--InputToRange-border-color);
+	padding: 0.5rem;
+	font-size: 0.8rem;
+	border-radius: 5px;
+}
+
+.InputToRange__labels-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.InputToRange__labels-container__label {
+	border-radius: 5px;
+	background-color: var(--InputToRange-label-background-color);
+	background-clip: padding-box;
+	border: 1px solid var(--InputToRange-border-color);
+	color: var(--InputToRange-dark-color);
+	font-size: 1rem;
+	margin: 0.5rem;
+	padding: 0 0.5rem;
+	display: flex;
+}
+
+.InputToRange__labels-container__label__close {
+	border: none;
+	background: transparent;
+	color: var(--InputToRange-error-color);
+	font-weight: bold;
+}
+
+.InputToRange__labels-container__label__close:hover {
+	cursor: pointer;
+}
+
+.InputToRange__labels-container__label__close:active {
+	background-color: var(
+		--InputToRange-button-active-background-color
+	);
+	border-radius: 10px;
+}
+
+.InputToRange__labels-container__label__close:focus {
+	outline: none;
+}
+
+.InputToRange__input-container {
+	margin: 0.5rem;
+}
+
+.InputToRange__input-container__input {
+	padding-left: 0.5rem;
+	box-sizing: border-box;
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-clip: padding-box;
+	border: 1px solid var(--InputToRange-border-color);
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out,
+		box-shadow 0.15s ease-in-out;
+	box-sizing: border-box;
+}
+
+.InputToRange__Error {
+	color: var(--InputToRange-error-color);
+	margin: 0.5rem;
+}

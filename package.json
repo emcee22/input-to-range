@@ -1,6 +1,6 @@
 {
 	"name": "input-to-range",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "React component that generates 2d array based on input value",
 	"files": [
 		"dist/*"
@@ -11,7 +11,11 @@
 		"build": "babel ./src --out-dir ./dist -s inline --copy-files"
 	},
 	"author": "Paul Harbuz",
-	"license": "ISC",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/emcee22/input-to-range"
+	},
 	"peerDependencies": {
 		"react": "^16.6.1",
 		"react-dom": "^16.6.3"

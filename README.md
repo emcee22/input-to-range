@@ -32,18 +32,17 @@ import { InputToRange } from 'input-to-range';
 function App() {
     const [labels, setLabels] = useState([['10-30', '150-170']]);
 
-	return (
-		<div>
-			<InputToRange
-				useLabels={true}
-				labels={labels}
-				onChange={ev => {
-					console.log(ev.labels); // use labels
-					console.log(ev.ranges); // use ranges
-				}}
-			/>
-		</div>
-	);
+    return (
+	<div>
+	    <InputToRange
+	    useLabels={true}
+	    labels={labels}
+	    onChange={ev => {
+	        console.log(ev.labels); // use labels
+	        console.log(ev.ranges); // use ranges
+	    }}/>
+        </div>
+    );
 }
 ```
 

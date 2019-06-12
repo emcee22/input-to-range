@@ -80,6 +80,10 @@ labels: ['100', '101-103'],
 ranges: [[100], [101,102,103]]
 }
 
+## BUGS
+
+- removing a label should trigger onChange event
+
 ## @TODO -> props that need implementation
 
 `allowIntersection` // don't allow duplicates inside the 2d arrays

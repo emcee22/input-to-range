@@ -1,6 +1,6 @@
 {
 	"name": "input-to-range",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "React component that generates 2d array based on input value",
 	"files": [
 		"dist/*"

@@ -37,6 +37,18 @@ export const InputToRange = props => {
 		errorState && setErrorState(false);
 	};
 
+	const emitOnChange = labelState => {
+		// create an array of ranges based on the current labels
+		let rangeArrays = createMultipleRangesFromArrayOfValues(labelState);
+
+		// trigger on change event with the new data
+		onChange &&
+			onChange({
+				labels: labelState,
+				ranges: rangeArrays
+			});
+	};
+
 	const handleKeyPress = event => {
 		const code = event.which || event.keyCode;
 		if (keys.indexOf(code) > -1) {
@@ -52,17 +64,7 @@ export const InputToRange = props => {
 			const updatedLabelState = [...labelsState, inputState];
 			setLabelsState(updatedLabelState);
 
-			// create an array of ranges based on the current labels
-			let rangeArrays = createMultipleRangesFromArrayOfValues(
-				updatedLabelState
-			);
-
-			// trigger on change event with the new data
-			onChange &&
-				onChange({
-					labels: updatedLabelState,
-					ranges: rangeArrays
-				});
+			emitOnChange(updatedLabelState);
 
 			// reset the input
 			setInputState('');
@@ -72,6 +74,8 @@ export const InputToRange = props => {
 	const removeLabel = key => {
 		const newLabelsState = labelsState.filter((label, k) => k !== key);
 		setLabelsState(newLabelsState);
+
+		emitOnChange(newLabelsState);
 	};
 
 	const createLabels = () => {

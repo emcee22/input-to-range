@@ -30,19 +30,20 @@ import React from 'react';
 import { InputToRange } from 'input-to-range';
 
 function App() {
-    const [labels, setLabels] = useState(['10-30', '150-170']);
+	const [labels, setLabels] = useState(['10-30', '150-170']);
 
-    return (
-	<div>
-	    <InputToRange
-	    useLabels={true}
-	    labels={labels}
-	    onChange={ev => {
-	        console.log(ev.labels); // use labels
-	        console.log(ev.ranges); // use ranges
-	    }}/>
-        </div>
-    );
+	return (
+		<div>
+			<InputToRange
+				useLabels={true}
+				labels={labels}
+				onChange={ev => {
+					console.log(ev.labels); // use labels
+					console.log(ev.ranges); // use ranges
+				}}
+			/>
+		</div>
+	);
 }
 ```
 
@@ -50,9 +51,11 @@ function App() {
 
 In the project directory, you can run:
 
-`npm run build`
+`npm run build` -> runs tests and creates the build
 
-`npm run test`
+`npm run test` -> runs tests
+
+`npm run watch` -> watches over files for development
 
 ## Properties and Events
 
@@ -81,7 +84,7 @@ ranges: [[100], [101,102,103]]
 
 ## BUGS
 
-- removing a label should trigger onChange event
+-   removing a label should trigger onChange event
 
 ## @TODO -> props that need implementation
 

@@ -4,12 +4,7 @@
 	--InputToRange-error-color: rgb(255, 4, 4);
 	--InputToRange-border-color: #ced4da;
 	--InputToRange-label-background-color: rgba(120, 199, 255, 0.27);
-	--InputToRange-button-active-background-color: rgba(
-		255,
-		9,
-		32,
-		0.13
-	);
+	--InputToRange-button-active-background-color: rgba(255, 9, 32, 0.13);
 }
 
 .InputToRange {
@@ -20,12 +15,12 @@
 	border-radius: 5px;
 }
 
-.InputToRange__labels-container {
+.InputToRange .InputToRange__labels-container {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.InputToRange__labels-container__label {
+.InputToRange .InputToRange__labels-container__label {
 	border-radius: 5px;
 	background-color: var(--InputToRange-label-background-color);
 	background-clip: padding-box;
@@ -37,33 +32,31 @@
 	display: flex;
 }
 
-.InputToRange__labels-container__label__close {
+.InputToRange .InputToRange__labels-container__label__close {
 	border: none;
 	background: transparent;
 	color: var(--InputToRange-error-color);
 	font-weight: bold;
 }
 
-.InputToRange__labels-container__label__close:hover {
+.InputToRange .InputToRange__labels-container__label__close:hover {
 	cursor: pointer;
 }
 
-.InputToRange__labels-container__label__close:active {
-	background-color: var(
-		--InputToRange-button-active-background-color
-	);
+.InputToRange .InputToRange__labels-container__label__close:active {
+	background-color: var(--InputToRange-button-active-background-color);
 	border-radius: 10px;
 }
 
-.InputToRange__labels-container__label__close:focus {
+.InputToRange .InputToRange__labels-container__label__close:focus {
 	outline: none;
 }
 
-.InputToRange__input-container {
+.InputToRange .InputToRange__input-container {
 	margin: 0.5rem;
 }
 
-.InputToRange__input-container__input {
+.InputToRange .InputToRange__input-container__input {
 	padding-left: 0.5rem;
 	box-sizing: border-box;
 	width: 100%;
@@ -72,12 +65,11 @@
 	background-clip: padding-box;
 	border: 1px solid var(--InputToRange-border-color);
 	border-radius: 0.25rem;
-	transition: border-color 0.15s ease-in-out,
-		box-shadow 0.15s ease-in-out;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	box-sizing: border-box;
 }
 
-.InputToRange__Error {
+.InputToRange .InputToRange__Error {
 	color: var(--InputToRange-error-color);
 	margin: 0.5rem;
 }

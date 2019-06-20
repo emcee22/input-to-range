@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import './InputToRange.css';
-import { finalPattern, keys, errorMessage } from './InputToRange.constants.js';
+import {
+	finalPattern,
+	defaultKeys,
+	errorMessage
+} from './InputToRange.constants.js';
 import { createMultipleRangesFromArrayOfValues } from './InputToRange.utils';
 
 export const InputToRange = props => {
 	const {
-		useLabels,
+		ignoreDefaultStyles,
+		hideLabels,
 		labels,
 		onChange,
 		allowIntersection, // @TODO -> idea is not to allow same numbers twice
-		onlyPossitive, // @TODO -> allow only positive numbers
-		onlyNegative, // @TODO -> allow only positive numbers
-		extraKeys, // @TODO -> idea is to support more than just SPACE + ENTER
-		useStyles, // @TODO -> idea is to use or not the built in styles
+		onlyPossitiveNumbers, // @TODO -> allow only positive numbers
+		onlyNegativeNumbers, // @TODO -> allow only positive numbers
+		keys, // @TODO -> idea is to support more than just SPACE + ENTER
 		...restOfProps
 	} = props;
 
@@ -51,7 +55,7 @@ export const InputToRange = props => {
 
 	const handleKeyPress = event => {
 		const code = event.which || event.keyCode;
-		if (keys.indexOf(code) > -1) {
+		if (defaultKeys.indexOf(code) > -1) {
 			event.preventDefault();
 
 			const regex = RegExp(finalPattern);
@@ -100,8 +104,8 @@ export const InputToRange = props => {
 	};
 
 	return (
-		<div className="InputToRange">
-			{useLabels && (
+		<div className={!ignoreDefaultStyles ? 'InputToRange' : ''}>
+			{!hideLabels && (
 				<div className="InputToRange__labels-container">
 					{createLabels()}
 				</div>

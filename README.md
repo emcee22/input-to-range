@@ -35,11 +35,10 @@ function App() {
 	return (
 		<div>
 			<InputToRange
-				useLabels={true}
 				labels={labels}
 				onChange={ev => {
-					console.log(ev.labels); // use labels
-					console.log(ev.ranges); // use ranges
+					console.log(ev.labels); // labels
+					console.log(ev.ranges); // ranges
 				}}
 			/>
 		</div>
@@ -65,11 +64,17 @@ In the project directory, you can run:
 
 This is useful if you want to start with default values
 
-### useLabels
+### hideLabels
 
 > `boolean`
 
-If you want to use the build in labels or not
+Show/Hide the built in labels
+
+### ignoreDefaultStyles
+
+> `boolean`
+
+If set on true no default styles will be applied
 
 ### onChange
 
@@ -90,7 +95,6 @@ ranges: [[100], [101,102,103]]
 `onlyPossitiveNumbers` // allow only positive numbers<br/>
 `onlyNegativeNumbers` // allow only positive numbers<br/>
 `keys` // override the existing keys SPACE and ENTER<br/>
-`useDefaultStyles` // use default styles or not<br/>
 
 > Click here for the demo:
 > [InputToRange demo on firebase](https://inputtorange.firebaseapp.com/)

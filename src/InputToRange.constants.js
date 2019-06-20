@@ -26,7 +26,7 @@ export const patten6 = RegExp(/^[0-9]+[-](\(-)[0-9]+(\))$/);
 export const finalPattern = /^[0-9]+$|^[0-9]+[-][0-9]+$|^(\(-)[0-9]+(\))[-][0-9]+$|^(\(-)[0-9]+(\))$|^(\(-)[0-9]+(\))[-](\(-)[0-9]+(\))$|^[0-9]+[-](\(-)[0-9]+(\))$/;
 
 // keys that trigger input validation
-export const keys = [32, 13];
+export const defaultKeys = [32, 13];
 
 // error message that is displayed if the provided data is incorrect
 export const errorMessage =

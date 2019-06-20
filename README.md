@@ -4,7 +4,7 @@
 
 ## The InputToRange component
 
-Created as a helper for configurations steps in different apps, for example you may have a e-book app where you can the author can configure his book chapters:
+Created as a helper for configurations steps in different apps, for example you may have a e-book app where the author can configure his book chapters:
 
 Chapter 1: `1-10` (1 to 10 pages)
 Chapter 2: `11-76` (11 to 76 pages)
